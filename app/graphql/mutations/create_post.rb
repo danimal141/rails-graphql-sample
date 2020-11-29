@@ -1,3 +1,18 @@
+# Example:
+#   mutation {
+#     createPost(
+#       input:{
+#         title: "title1"
+#         description: "description1"
+#       }
+#     ){
+#       post {
+#         id
+#         title
+#         description
+#       }
+#     }
+#   }
 module Mutations
   class CreatePost < BaseMutation
     field :post, Types::PostType, null: true

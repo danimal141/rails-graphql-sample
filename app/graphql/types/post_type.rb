@@ -7,5 +7,8 @@ module Types
     field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
 
     field :comments, [Types::CommentType], null: false
+    def comments
+      Loaders::AssociationLoader.for(object.class, :comments).load(object)
+    end
   end
 end
