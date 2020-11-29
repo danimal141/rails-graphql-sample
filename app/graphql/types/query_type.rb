@@ -1,22 +1,3 @@
-# Example:
-#   posts(first: 10) {
-#     edges {
-#       cursor
-#       node {
-#         id
-#         title
-#         comments {
-#           id
-#         }
-#       }
-#     }
-#     pageInfo {
-#       endCursor
-#       hasNextPage
-#       startCursor
-#       hasPreviousPage
-#     }
-#   }
 module Types
   class QueryType < Types::BaseObject
     field :posts, Types::PostType.connection_type, null: false
